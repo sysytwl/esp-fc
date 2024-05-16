@@ -81,7 +81,8 @@ class Buzzer
 
     void _play(bool v, int time, BuzzerPlayStatus s)
     {
-      _write(v);
+      if (v) tone(_model.config.pin[PIN_BUZZER], 6000, time);
+      //_write(v);
       _delay(time);
       _status = s;
     }
