@@ -36,8 +36,10 @@ class Wireless
 
     void startAp()
     {
-      bool status = WiFi.softAP("ESP-FC", NULL, 3, 1);
-      _model.logger.info().log(F("WIFI AP START")).logln(status);
+      WiFi.mode(WIFI_STA);
+      WiFi.channel(3);
+      //bool status = WiFi.softAP("ESP-FC", NULL, 3, 1);
+      //_model.logger.info().log(F("WIFI AP START")).logln(status);
     }
 
     int connect()
