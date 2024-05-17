@@ -36,7 +36,7 @@ class Wireless
 
     void startAp()
     {
-      bool status = WiFi.softAP("ESP-FC");
+      bool status = WiFi.softAP("ESP-FC", NULL, 3, 1);
       _model.logger.info().log(F("WIFI AP START")).logln(status);
     }
 
